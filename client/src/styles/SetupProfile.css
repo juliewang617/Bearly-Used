@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap");
+
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.setup-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+/* Form Styles */
+.setup-profile-form {
+  background-color: white;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  color: var(--primary-dark);
+}
+
+input,
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-message {
+  color: var(--accent-coral);
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .setup-profile-container {
+    padding: 1rem;
+  }
+
+  .setup-profile-form {
+    padding: 1.5rem;
+  }
+
+  button {
+    padding: 1rem;
+  }
+}

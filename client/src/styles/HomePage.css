@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap");
+
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-brown: #fce1c5;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Base styles */
+body {
+  font-family: "Inter", sans-serif;
+  background-color: var(--secondary-beige);
+  color: var(--primary-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "DM Sans", sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--secondary-brown) !important;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+}
+
+.navbar .btn {
+  transition: transform 0.2s ease;
+}
+
+.navbar .btn:hover {
+  transform: translateY(-2px);
+}
+
+.search-bar {
+  display: flex; 
+  position: relative;
+  width: 30rem;
+}
+
+.search-bar input {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--shadow-color);
+  font-family: "Inter", sans-serif;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: var(--accent-coral);
+  box-shadow: 0 0 0 2px rgba(255, 131, 96, 0.1);
+}
+
+.search-btn { 
+  border-radius: 100%; 
+  width: 3em; 
+  height: 3em;
+  border: none; 
+  background: none; 
+}
+
+.dropdown-container {
+  display: flex;
+  gap: 1rem; 
+  align-items: center;
+}
+
+.dropdown-toggle {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  border: none;
+  padding: 0.5rem;
+}
+
+.dropdown-item {
+  border-radius: 8px;
+  margin: 2px 0;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background-color: var(--secondary-beige);
+  transform: translateX(4px);
+}
+
+/* Button styles */
+.btn-light {
+  background-color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-light:hover {
+  background-color: var(--accent-coral);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.create-listing {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.create-listing:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+/* Homepage listings layout */
+.homepage-listings {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.homepage-listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+/* Individual listing card styles */
+.homepage-listing {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.homepage-listing:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 30px var(--shadow-color);
+}
+
+.homepage-listing-image {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.homepage-listing-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.homepage-listing:hover .homepage-listing-image img {
+  transform: scale(1.05);
+}
+
+.homepage-listing-title {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+  color: var(--primary-dark);
+  text-align: center;
+  width: 100%;
+  -webkit-line-clamp: 2;
+  line-clamp:inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%; /* some of these are definitely unnecessary */
+
+}
+
+.homepage-listing-price {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: var(--accent-coral);
+  margin: 0.5rem 0;
+}
+
+.homepage-listing-category {
+  font-size: 0.9rem;
+  color: var(--accent-sage);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.homepage-listing-description {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 0.5rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp:inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+/* Modal styles */
+.modal-content {
+  border-radius: 16px;
+  border: none;
+}
+
+.modal-header {
+  padding: 1.5rem;
+}
+
+.btn-close {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.btn-close:hover {
+  opacity: 1;
+}
+
+/* Loading animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+.pagination {
+  margin-bottom: 2rem;
+  font-family: "DM Sans", sans-serif;
+}
+
+.page-link {
+  color: var(--primary-dark);
+  background-color: white;
+  border-color: var(--shadow-color);
+}
+
+.page-link:hover {
+  color: var(--accent-coral);
+  background-color: var(--secondary-beige);
+}
+
+.page-item.active .page-link {
+  background-color: var(--accent-coral);
+  border-color: var(--accent-coral);
+  color: white;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #fff;
+  border-color: var(--shadow-color);
+}
+
+.no-items-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  margin: 2rem auto;
+  max-width: 600px;
+}
+
+.no-items-found i {
+  font-size: 3rem;
+  color: var(--accent-coral);
+  margin-bottom: 1rem;
+}
+
+.no-items-found h3 {
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.no-items-found p {
+  color: #666;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .homepage-listings {
+    padding: 1rem;
+  }
+
+  
+
+  .homepage-listings-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .container-fluid {
+    gap: 0.5rem;
+  }
+
+  .navbar-nav {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .nav-item {
+    margin-right: 0;
+  }
+
+  .create-listing {
+    width: 100%;
+  }
+}
+

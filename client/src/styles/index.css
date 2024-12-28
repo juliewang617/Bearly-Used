@@ -1,0 +1,25 @@
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Inter", sans-serif;
+
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, a, span {
+  font-family: "DM Sans", sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

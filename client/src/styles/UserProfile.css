@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap");
+
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.user-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+}
+
+.back-link {
+  display: flex;
+  align-items: center;
+  color: var(--primary-dark);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.back-link:hover {
+  transform: translateX(-4px);
+}
+
+.back-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+
+.create-listing {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px var(--shadow-color);
+}
+
+.create-listing:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+/* Profile section */
+.profile-container {
+  background-color: white;
+  border-radius: 24px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  position: relative;
+}
+
+.profile {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.user-page-profile-picture {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: var(--secondary-beige);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: transform 0.3s ease;
+}
+
+.profile-picture:hover {
+  transform: scale(1.02);
+}
+
+.profile-info {
+  flex-grow: 1;
+}
+
+.profile-info .name {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+}
+
+.profile-info p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tags .tag {
+  background-color: var(--secondary-beige);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.tags .tag:hover {
+  background-color: var(--accent-sage);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.listing-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.listing-actions button {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.edit-profile {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background-color: var(--secondary-beige);
+  color: var(--primary-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.edit-profile:hover {
+  background-color: var(--primary-dark);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.sold-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--accent-coral);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.modal.show {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: block;
+}
+
+/* Listings section */
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  margin: 2rem 0 1.5rem;
+}
+
+.listings-navigation {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  margin-bottom: 2rem;
+}
+
+.listings {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.listing {
+  background-color: white;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.listing:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px var(--shadow-color);
+}
+
+.listing-image {
+  height: 160px;
+  background-color: var(--secondary-beige);
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.listing-price {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent-coral);
+  margin: 0.5rem 0;
+}
+
+.listing-name {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  color: var(--primary-dark);
+  -webkit-line-clamp: 2;
+  line-clamp:inherit;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 100%; /* some of these are definitely unnecessary */
+
+}
+
+.arrow-btn {
+  background-color: var(--secondary-beige);
+  border: none;
+  padding: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.arrow-btn:not(:disabled):hover {
+  background-color: var(--primary-blue);
+  color: white;
+  transform: scale(1.1);
+}
+
+.arrow-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .profile {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .edit-profile {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .listings {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

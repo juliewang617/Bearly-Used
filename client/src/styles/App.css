@@ -1,0 +1,100 @@
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --primary-brown: #d29770;
+  --secondary-beige: #f5f0e0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1px + 2vmin);
+  color: white;
+}
+
+/* Navbar Styles */
+.navbar-custom {
+  background-color: var(--primary-brown) !important;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 50;
+  margin-left: 1rem
+}
+
+.user-profile-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.user-name {
+  color: white;
+  text-decoration: none;
+}
+
+.user-name:hover {
+  color: var(--secondary-beige);
+  text-decoration: none;
+}
+
+.profile-picture {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.btn-signout { 
+  background-color: var(--primary-dark);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+
+.btn-signout:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .navbar-container {
+    padding: 0.5rem;
+  }
+
+  .user-profile-section {
+    gap: 0.5rem;
+  }
+
+  .user-name {
+    margin-right: 0.5rem;
+  }
+}

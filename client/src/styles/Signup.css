@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&family=Manrope:wght@500;600&display=swap");
+
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+.sign-up-container{
+    margin: auto; 
+    margin-top: 5em;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+h2 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: bold; 
+  color: var(--primary-dark);
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  margin-top: 1em;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .setup-profile-container {
+    padding: 1rem;
+  }
+
+  .setup-profile-form {
+    padding: 1.5rem;
+  }
+
+  button {
+    padding: 1rem;
+  }
+}

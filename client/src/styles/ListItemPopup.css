@@ -1,0 +1,36 @@
+*
+{
+  font-family: "DM Sans", sans-serif;
+}
+
+.btn-submit {
+  background-color: var(--primary-blue) !important;
+  color: white !important;
+}
+
+.btn-submit:hover {
+  background-color: #398b9b !important;
+  color: var(--primary-dark);
+}
+
+
+.tag-container {
+  margin-bottom: 10px;
+}
+
+.btn-close {
+  font-size: 0.75rem;
+  padding: 0.25rem;
+}
+
+.modal-backdrop.fade {
+  transition: opacity 0.15s linear;
+}
+
+.modal-backdrop.show {
+  opacity: 0.3 !important;
+}
+
+.text-center {
+  margin-top: 1rem;
+}

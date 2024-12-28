@@ -1,0 +1,339 @@
+:root {
+  --primary-blue: #4fc3db;
+  --primary-dark: #2d3047;
+  --secondary-beige: #f5ebe0;
+  --accent-coral: #ff8360;
+  --accent-sage: #7ca982;
+  --shadow-color: rgba(0, 0, 0, 0.08);
+  font-family: "DM Sans", sans-serif;
+}
+
+p {
+  font-family: "DM Sans", sans-serif;
+}
+
+.header {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.back-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.back-link:hover .back-icon {
+  color: var(--accent-coral);
+}
+.thumbnail-container {
+  max-width: 100%;
+}
+
+.thumbnail-container .d-flex {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 10px;
+  padding-bottom: 10px;
+}
+
+.thumbnail-container .thumbnail {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.thumbnail-container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.product-page {
+  background-color: var(--secondary-beige);
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+.product-container {
+  background: white;
+  border-radius: 24px;
+  padding: 3rem;
+  box-shadow: 0 4px 20px var(--shadow-color);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-image-container {
+  position: relative;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px var(--shadow-color);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.product-image:hover {
+  transform: scale(1.02);
+}
+
+.thumbnail-container {
+  margin-top: 1.5rem;
+}
+
+.thumbnail {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+}
+
+.thumbnail:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+.thumbnail.active {
+  opacity: 1;
+  border-color: var(--primary-blue);
+}
+
+.product-info {
+  padding-left: 2rem;
+}
+
+.product-title {
+  font-family: "DM Sans", sans-serif;
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+  margin-bottom: 1rem;
+  line-height: 1.2;         
+  overflow: hidden;        
+  display: -webkit-box;
+  -webkit-box-orient: vertical; 
+  word-break: break-word; 
+
+}
+
+.product-price {
+  font-family: "Manrope", sans-serif;
+  font-size: 2rem;
+  color: var(--accent-coral);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.product-description {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.seller-info-section {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.seller-info-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: var(--primary-dark);
+}
+
+.seller-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.seller-detail {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.seller-detail i {
+  color: var(--accent-coral);
+  font-size: 1.1rem;
+}
+
+.copy-email-btn {
+  background: none;
+  border: none;
+  color: var(--accent-coral);
+  cursor: pointer;
+  padding: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.copy-email-btn:hover {
+  color: var(--primary-dark);
+}
+
+.view-profile-btn {
+  background-color: var(--secondary-beige);
+  border: none;
+  border-radius: 6px;
+  color: var(--primary-dark);
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-family: "DM Sans";
+  transition: all 0.2s ease;
+}
+
+.view-profile-btn:hover {
+  background-color: var(--secondary-brown);
+  transform: translateY(-2px);
+}
+
+.tag-container {
+  margin-bottom: 10px;
+}
+
+.seller-profile-btn {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondary-beige);
+  color: var(--primary-dark);
+  padding: 0.5rem 1rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.seller-profile-btn:hover {
+  background-color: var(--secondary-brown);
+  transform: translateY(-2px);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.btn-edit {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.btn-sold {
+  background-color: var(--accent-sage);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.btn-cancel {
+  background-color: white;
+  color: var(--accent-coral);
+  font-family: "DM Sans", sans-serif;
+
+  text-decoration: underline;
+}
+
+.btn-delete {
+  background-color: var(--accent-coral);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.btn-danger {
+  background-color: var(--accent-coral);
+  border: none;
+  padding: 1rem 2rem;
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 12px;
+}
+
+.btn-edit:hover {
+  transform: translateY(-2px);
+  color: white;
+
+  background-color: #3c92a3;
+}
+
+.btn-sold:hover {
+  transform: translateY(-2px);
+  color: white;
+  background-color: #618465;
+}
+
+.btn-delete:hover {
+  transform: translateY(-2px);
+  color: white;
+  background-color: #a95841;
+}
+
+.btn-danger:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-coral);
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 768px) {
+  .product-title {
+    font-size: 1.8rem; 
+  }
+}
